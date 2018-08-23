@@ -4,17 +4,19 @@
 
 require 'watir'
 
-profile = Selenium::WebDriver::Firefox::Profile.new
-profile['browser.startup.homepage_override.mstone'] = 'ignore'
-profile['browser.startup.homepage'] = 'about:blank'
-profile['devtools.jsonview.enabled'] = false
-profile['startup.homepage_welcome_url'] = 'about:blank'
-profile['startup.homepage_welcome_url.additional'] = 'about:blank'
-profile['toolkit.telemetry.reportingpolicy.firstRun'] = false
-profile['xpinstall.signatures.required'] = false
+def get_firefox_browser
+  profile = Selenium::WebDriver::Firefox::Profile.new
+  profile['browser.startup.homepage_override.mstone'] = 'ignore'
+  profile['browser.startup.homepage'] = 'about:blank'
+  profile['devtools.jsonview.enabled'] = false
+  profile['startup.homepage_welcome_url'] = 'about:blank'
+  profile['startup.homepage_welcome_url.additional'] = 'about:blank'
+  profile['toolkit.telemetry.reportingpolicy.firstRun'] = false
+  profile['xpinstall.signatures.required'] = false
+  Watir::Browser.new :firefox, profile: profile
+end
 
-browser = Watir::Browser.new :firefox, profile: profile
-
+browser = get_firefox_browser
 browser.goto 'https://example.com'
 
 browser.text_field(name: 'user').set('myUsername')
