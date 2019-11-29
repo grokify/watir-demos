@@ -15,7 +15,7 @@ This example uses Firefox. On OS-X, it's necessary to have an Application named 
 
 If you do not have an app named "Firefox", you will get the following error:
 
-`/Users/<username>/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.6/lib/selenium/webdriver/firefox/binary.rb:135:in 'path': **Could not find Firefox binary (os=macosx). Make sure Firefox is installed or set the path manually with Selenium::WebDriver::Firefox::Binary.path= (Selenium::WebDriver::Error::WebDriverError)**`
+`/Users/<username>/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.6/lib/selenium/webdriver/firefox/binary.rb:135:in 'path': Could not find Firefox binary (os=macosx). Make sure Firefox is installed or set the path manually with Selenium::WebDriver::Firefox::Binary.path= (Selenium::WebDriver::Error::WebDriverError)`
 
 ## geckodriver
 
@@ -32,6 +32,6 @@ More information is available below:
 
 Missing the `geckodriver` executable will result in the following error:
 
-`/Users/<username>/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.6/lib/selenium/webdriver/common/service.rb:136:in 'binary_path': **Unable to find Mozilla geckodriver. Please download the server from (Selenium::WebDriver::Error::WebDriverError)
+`/Users/<username>/.rvm/gems/ruby-2.6.3/gems/selenium-webdriver-3.142.6/lib/selenium/webdriver/common/service.rb:136:in 'binary_path': Unable to find Mozilla geckodriver. Please download the server from (Selenium::WebDriver::Error::WebDriverError)
 https://github.com/mozilla/geckodriver/releases and place it somewhere on your PATH.
-More info at https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver.**`
+More info at https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver.`
